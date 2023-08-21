@@ -210,7 +210,7 @@ const FilmDetails = ({navigation, route}) => {
               ) : isLoading ? (
                 <ActivityIndicator
                   style={{marginLeft: 8}}
-                  color={'#white'}></ActivityIndicator>
+                  color={'white'}></ActivityIndicator>
               ) : (
                 <Text
                   style={{color: 'white', fontWeight: 'bold', marginLeft: 8}}>
