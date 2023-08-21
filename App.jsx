@@ -48,14 +48,46 @@ export default function App() {
               headerShown: false,
             }}
             initialRouteName={initialRoute}>
-            <Stack.Screen name="Hello" component={HelloScreen} />
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Search" component={SearchScreen} />
-            <Stack.Screen name="Film" component={FilmDetails} />
-            <Stack.Screen name="Episode" component={SerialEpisodeDetails} />
-            <Stack.Screen name="Player" component={PlayerScreen} />
-            <Stack.Screen name="Season" component={SeasonScreen} />
+            <Stack.Screen
+              name="Hello"
+              component={HelloScreen}
+              options={{orientation: 'portrait'}}
+            />
+            <Stack.Screen
+              name="Login"
+              component={LoginScreen}
+              options={{orientation: 'portrait'}}
+            />
+            <Stack.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{orientation: 'portrait'}}
+            />
+            <Stack.Screen
+              name="Search"
+              component={SearchScreen}
+              options={{orientation: 'portrait'}}
+            />
+            <Stack.Screen
+              name="Film"
+              component={FilmDetails}
+              options={{orientation: 'portrait'}}
+            />
+            <Stack.Screen
+              name="Episode"
+              component={SerialEpisodeDetails}
+              options={{orientation: 'portrait'}}
+            />
+            <Stack.Screen
+              name="Player"
+              component={PlayerScreen}
+              options={{orientation: 'landscape'}}
+            />
+            <Stack.Screen
+              name="Season"
+              component={SeasonScreen}
+              options={{orientation: 'portrait'}}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
