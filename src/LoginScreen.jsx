@@ -169,7 +169,6 @@ const LoginScreen = ({navigation}) => {
                     captchaToken: token,
                   },
                 );
-                console.log(loginRes.data);
                 if (loginRes.data.success) {
                   setLoginStatus('Logged in successfully');
                   await AsyncStorage.setItem('firstOpen', 'false');

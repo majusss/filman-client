@@ -41,7 +41,11 @@ export default function App() {
   return (
     <PaperProvider>
       <StatusBar backgroundColor="#0E0E0E" barStyle="light-content" />
-      <View style={{flex: 1, backgroundColor: '#0E0E0E'}}>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#0E0E0E',
+        }}>
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{

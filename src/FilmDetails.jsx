@@ -37,7 +37,6 @@ const FilmDetails = ({navigation, route}) => {
       );
       if (detailsRes.data.success) {
         setFilmDetails(detailsRes.data.details);
-        console.log(detailsRes.data.details);
         setLoading(false);
       } else {
         console.log(detailsRes.data.error);

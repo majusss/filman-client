@@ -1,4 +1,4 @@
-import {SafeAreaView, ScrollView, View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import ProfileLabel from './components/ProfileLabel';
 import FilmSearch from './components/FilmSearch';
 import HorizontalFilmsList from './components/HorizontalFilmsList';
@@ -69,7 +69,7 @@ const HelloScreen = ({navigation}) => {
           />
         </View>
       ) : (
-        <SafeAreaView
+        <View
           style={{
             position: 'absolute',
             width: '100%',
@@ -93,7 +93,7 @@ const HelloScreen = ({navigation}) => {
               films={films.serialeNaCzasie}
             />
           </ScrollView>
-        </SafeAreaView>
+        </View>
       )}
     </View>
   );
