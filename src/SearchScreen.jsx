@@ -81,7 +81,7 @@ const SearchScreen = ({navigation}) => {
 
         <View
           style={{
-            height: '100%',
+            height: 55,
             width: '66%',
             marginRight: 3,
             backgroundColor: '#292929',
@@ -89,14 +89,19 @@ const SearchScreen = ({navigation}) => {
             alignItems: 'center',
           }}>
           <TextInput
+            onEndEditing={fetch}
+            autoFocus={true}
             style={{
               backgroundColor: '#292929',
+              borderRadius: 0,
+              margin: 1,
               flex: 1,
               justifyContent: 'center',
             }}
             value={query}
             onChangeText={text => setQuery(text)}
             activeUnderlineColor={'#292929'}
+            underlineColor={"#292929"}
             cursorColor={'white'}
             textColor={'white'}
             placeholder={'Search here'}></TextInput>
