@@ -3,6 +3,7 @@ import {
   Dimensions,
   ImageBackground,
   ScrollView,
+  StatusBar,
   Text,
   TouchableOpacity,
   View,
@@ -60,6 +61,7 @@ const FilmDetails = ({navigation, route}) => {
         flex: 1,
         backgroundColor: '#0E0E0E',
       }}>
+      <StatusBar translucent backgroundColor="transparent"></StatusBar>
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => navigation.goBack()}
@@ -71,6 +73,7 @@ const FilmDetails = ({navigation, route}) => {
           borderColor: '#8C8C8C',
           borderWidth: 1,
           margin: 24,
+          marginTop: 12 + StatusBar.currentHeight,
           zIndex: 99,
         }}>
         <SvgUri

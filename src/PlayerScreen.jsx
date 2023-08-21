@@ -5,30 +5,6 @@ import {WebView} from 'react-native-webview';
 // import * as ScreenOrientation from 'expo-screen-orientation';
 
 const PlayerScreen = ({navigation, route}) => {
-  // useEffect(() => {
-  //   const Orientation = async () => {
-  //     await ScreenOrientation.lockAsync(
-  //       ScreenOrientation.OrientationLock.LANDSCAPE,
-  //     );
-  //     StatusBar.setHidden(true);
-  //   };
-  //   Orientation();
-  // }, []);
-
-  // useEffect(() => {
-  //   const orientationDidChange = ScreenOrientation.addOrientationChangeListener(
-  //     async newOrientation => {
-  //       await ScreenOrientation.lockAsync(
-  //         ScreenOrientation.OrientationLock.LANDSCAPE,
-  //       );
-  //     },
-  //   );
-
-  //   return () => {
-  //     ScreenOrientation.removeOrientationChangeListener(orientationDidChange);
-  //   };
-  // }, []);
-
   const injectJavaScript = `
 window.originalClickHandler = function(event) {}
 setInterval(() => {
@@ -67,6 +43,7 @@ videoPlayer.requestFullscreen();
         height: '100%',
         backgroundColor: 'red',
       }}>
+      <StatusBar hidden></StatusBar>
       <WebView
         source={{uri: route.params.link}}
         injectedJavaScript={injectJavaScript}
