@@ -6,28 +6,10 @@ import {WebView} from 'react-native-webview';
 
 const PlayerScreen = ({navigation, route}) => {
   const injectJavaScript = `
-window.originalClickHandler = function(event) {}
 setInterval(() => {
   document.querySelectorAll('iframe').forEach((e) => e.remove());
 }, 100);
 const videoPlayer = document.querySelector('video');
-const videoParent = videoPlayer.parentNode;
-while (videoParent.firstChild) {
-  if (videoParent.firstChild !== videoPlayer) {
-    videoParent.removeChild(videoParent.firstChild);
-  } else {
-    break;
-  }
-}
-const chuj = document.createElement('div');
-chuj.className = 'vjs-watermark-content';
-videoPlayer.style.width = '100%';
-videoPlayer.style.height = 'auto';
-videoPlayer.style.maxHeight = '100vh';
-document.body.innerHTML = '';
-document.body.style.backgroundColor = "black";
-document.body.appendChild(chuj);
-document.body.appendChild(videoPlayer);
 document.body.style.overflow = 'hidden';
 document.body.style.backgroundColor = "black";
 videoPlayer.play();
@@ -49,6 +31,7 @@ videoPlayer.requestFullscreen();
         injectedJavaScript={injectJavaScript}
         mediaPlaybackRequiresUserAction={false}
         allowsFullscreenVideo={true}
+        setSupportMultipleWindows={false}
         onError={e => {
           console.log(e);
         }}
