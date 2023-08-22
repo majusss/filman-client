@@ -1,8 +1,6 @@
 import * as React from 'react';
-import {useEffect} from 'react';
 import {StatusBar, View} from 'react-native';
 import {WebView} from 'react-native-webview';
-// import * as ScreenOrientation from 'expo-screen-orientation';
 
 const PlayerScreen = ({navigation, route}) => {
   const injectJavaScript = `
