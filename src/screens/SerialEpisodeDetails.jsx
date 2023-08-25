@@ -48,7 +48,7 @@ const SerialEpisodeDetails = ({navigation, route}) => {
 
   useEffect(() => {
     getDetails();
-  });
+  }, []);
 
   return (
     <View
