@@ -7,11 +7,8 @@ const PlayerScreen = ({navigation, route}) => {
 setInterval(() => {
   document.querySelectorAll('iframe').forEach((e) => e.remove());
 }, 100);
-const videoPlayer = document.querySelector('video');
 document.body.style.overflow = 'hidden';
 document.body.style.backgroundColor = "black";
-videoPlayer.play();
-videoPlayer.requestFullscreen();
 `;
 
   return (
