@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
   Dimensions,
   ScrollView,
+  StatusBar,
   Text,
   TouchableOpacity,
   View,
@@ -20,6 +21,11 @@ const SearchScreen = ({navigation, route}) => {
         height: '100%',
         backgroundColor: '#0E0E0E',
       }}>
+      <StatusBar
+        translucent={false}
+        backgroundColor="#0E0E0E"
+        barStyle="light-content"
+      />
       <View
         style={{
           marginTop: 12,

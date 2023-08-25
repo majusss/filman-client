@@ -3,6 +3,7 @@ import {
   Dimensions,
   ImageBackground,
   ScrollView,
+  StatusBar,
   Text,
   TouchableOpacity,
   View,
@@ -65,6 +66,7 @@ const SerialEpisodeDetails = ({navigation, route}) => {
           borderRadius: 999,
           borderColor: '#8C8C8C',
           borderWidth: 1,
+          marginTop: 12 + StatusBar.currentHeight,
           margin: 24,
           zIndex: 99,
         }}>
