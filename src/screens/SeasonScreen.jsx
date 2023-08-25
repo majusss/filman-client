@@ -107,6 +107,7 @@ const SearchScreen = ({navigation, route}) => {
                       viewCount: undefined,
                       link: episode.url,
                     },
+                    serial: film,
                   })
                 }
                 style={{marginBottom: 20}}>

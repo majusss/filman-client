@@ -15,6 +15,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {encode} from 'base-64';
 import ActivityIndicatorWithErrorHandling from '../components/ActivityIndicatorWithErrorHandling';
 import HostBox from '../components/HostBox';
+import {addLastWatched} from '../utils/LastWatched';
 
 const SerialEpisodeDetails = ({navigation, route}) => {
   const [isLoading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ const SerialEpisodeDetails = ({navigation, route}) => {
   const [bottomPanelY, setBottomY] = useState(0);
   const [filmDetails, setFilmDetails] = useState({});
   const film = route.params.film;
+  const serial = route.params.serial;
 
   async function getDetails() {
     setError(undefined);
@@ -158,7 +160,12 @@ const SerialEpisodeDetails = ({navigation, route}) => {
                     .map((link, key) => {
                       if (!link.language) return;
                       return (
-                        <HostBox navigation={navigation} host={link}></HostBox>
+                        <HostBox
+                          navigation={navigation}
+                          host={link}
+                          afterClick={() => {
+                            addLastWatched(serial, film);
+                          }}></HostBox>
                       );
                     })}
                   <View style={{width: 100}}></View>

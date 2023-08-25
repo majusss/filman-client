@@ -2,11 +2,12 @@ import {Image, Text, View} from 'react-native';
 import * as React from 'react';
 import {TouchableRipple} from 'react-native-paper';
 
-const HostBox = ({navigation, host}) => {
+const HostBox = ({navigation, host, afterClick}) => {
   return (
     <TouchableRipple
       onPress={() => {
         navigation.navigate('Player', {link: host.link});
+        afterClick();
       }}
       borderless={true}
       rippleColor="rgba(255, 255, 255, .32)"
