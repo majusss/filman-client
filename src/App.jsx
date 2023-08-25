@@ -1,11 +1,11 @@
-import HelloScreen from './src/HelloScreen';
-import LoginScreen from './src/LoginScreen';
-import HomeScreen from './src/HomeScreen';
-import PlayerScreen from './src/PlayerScreen';
-import SearchScreen from './src/SearchScreen';
-import SeasonScreen from './src/SeasonScreen';
-import FilmDetails from './src/FilmDetails';
-import SerialEpisodeDetails from './src/SerialEpisodeDetails';
+import HelloScreen from './screens/HelloScreen';
+import LoginScreen from './screens/LoginScreen';
+import HomeScreen from './screens/HomeScreen';
+import PlayerScreen from './screens/PlayerScreen';
+import SearchScreen from './screens/SearchScreen';
+import SeasonScreen from './screens/SeasonScreen';
+import FilmDetails from './screens/FilmDetails';
+import SerialEpisodeDetails from './screens/SerialEpisodeDetails';
 
 import * as React from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';

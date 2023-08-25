@@ -12,8 +12,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
 import {encode} from 'base-64';
-import ActivityIndicatorWithErrorHandling from './components/ActivityIndicatorWithErrorHandling';
-import HostBox from './components/HostBox';
+import ActivityIndicatorWithErrorHandling from '../components/ActivityIndicatorWithErrorHandling';
+import HostBox from '../components/HostBox';
 
 const SerialEpisodeDetails = ({navigation, route}) => {
   const [isLoading, setLoading] = useState(true);

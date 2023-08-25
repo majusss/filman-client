@@ -1,11 +1,11 @@
 import {ScrollView, View} from 'react-native';
-import ProfileLabel from './components/ProfileLabel';
-import FilmSearch from './components/FilmSearch';
-import HorizontalFilmsList from './components/HorizontalFilmsList';
+import ProfileLabel from '../components/ProfileLabel';
+import FilmSearch from '../components/FilmSearch';
+import HorizontalFilmsList from '../components/HorizontalFilmsList';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
-import ActivityIndicatorWithErrorHandling from './components/ActivityIndicatorWithErrorHandling';
+import ActivityIndicatorWithErrorHandling from '../components/ActivityIndicatorWithErrorHandling';
 import * as React from 'react';
 
 const HelloScreen = ({navigation}) => {

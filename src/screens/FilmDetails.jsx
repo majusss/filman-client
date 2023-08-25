@@ -14,9 +14,9 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
 import {encode} from 'base-64';
 import {ActivityIndicator} from 'react-native-paper';
-import ActivityIndicatorWithErrorHandling from './components/ActivityIndicatorWithErrorHandling';
-import SeasonBox from './components/SeasonBox';
-import HostBox from './components/HostBox';
+import ActivityIndicatorWithErrorHandling from '../components/ActivityIndicatorWithErrorHandling';
+import SeasonBox from '../components/SeasonBox';
+import HostBox from '../components/HostBox';
 
 const FilmDetails = ({navigation, route}) => {
   const [isLoading, setLoading] = useState(true);

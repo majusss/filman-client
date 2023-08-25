@@ -6,8 +6,8 @@ import {ActivityIndicator, TextInput} from 'react-native-paper';
 import axios from 'axios';
 import AsyncStorage from '@react-native-community/async-storage';
 import {encode} from 'base-64';
-import FilmBox from './components/FilmBox';
-import ActivityIndicatorWithErrorHandling from './components/ActivityIndicatorWithErrorHandling';
+import FilmBox from '../components/FilmBox';
+import ActivityIndicatorWithErrorHandling from '../components/ActivityIndicatorWithErrorHandling';
 
 const SearchScreen = ({navigation}) => {
   const [query, setQuery] = useState('');
@@ -101,7 +101,7 @@ const SearchScreen = ({navigation}) => {
             value={query}
             onChangeText={text => setQuery(text)}
             activeUnderlineColor={'#292929'}
-            underlineColor={"#292929"}
+            underlineColor={'#292929'}
             cursorColor={'white'}
             textColor={'white'}
             placeholder={'Search here'}></TextInput>
